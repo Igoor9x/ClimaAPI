@@ -4,7 +4,7 @@ const apiCountryURL = "https://flagsapi.com/" // /flat/64.png
 
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector(".search");
-const container = document.querySelector(".container");
+const container = document.querySelector("body");
 const cityElement = document.querySelector(".city");
 const tempElement = document.querySelector(".temperature span");
 const descElement = document.querySelector(".description");
@@ -46,9 +46,9 @@ const getWeatherData = async(city) => {
 searchBtn.addEventListener("click", (e) => {
     e.preventDefault();
     const city = cityInput.value;
-    container.style.backgroundImage(url(`https://source.unsplash.com/random/3000x3000?${cityInput.value}`))
-
     showWeatherData(city);
+
+    container.style.backgroundImage = `url('https://source.unsplash.com/random/3000x3000?${city}')`;
 });
 cityInput.addEventListener("keyup", (e) =>{
     if(e.code==="Enter") {
@@ -56,3 +56,4 @@ cityInput.addEventListener("keyup", (e) =>{
         showWeatherData(city);
     }
 });
+

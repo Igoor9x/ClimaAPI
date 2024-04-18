@@ -5,7 +5,9 @@
     margin: 0;
 }
 body{
-    background: linear-gradient(180deg, #594cee 0%, #8dd0f5 100%);
+    background-image: url("https://source.unsplash.com/random/3000x3000?world");
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,10 +17,10 @@ body{
     display: none;
 }
 .container {
-    background-color: #5c54ed ;
+    background-color: #f0f0f094 ;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 2rem;
-    color: #fdfdfd;
+    color: #3c3c3c;
     border-radius: 1rem;
 }
 
